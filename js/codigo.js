@@ -5,7 +5,7 @@ const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
 
 const btnEmpezar = document.getElementById('btnEmpezar')
-const ULTIMO_NIVEL = 5
+const ULTIMO_NIVEL = 10
 
 class Juego {
   constructor() {
@@ -80,13 +80,13 @@ class Juego {
 
   iluminarColor(color, i){
     this.colores[color].classList.add('light')
-    setTimeout(() => this.apagarColor(color, i), 350)
+    setTimeout(() => this.apagarColor(color, i), 250)
   }
 
   iluminarSecuencia() {
     for (let i = 0; i < this.nivel; i++) {
       const color = this.transformarNumeroAColor(this.secuencia[i])
-      setTimeout(() => this.iluminarColor(color, i), 1000 * i)
+      setTimeout(() => this.iluminarColor(color, i), 500 * i)
     }
   }
 
@@ -129,7 +129,7 @@ class Juego {
         if(this.nivel === (ULTIMO_NIVEL + 1)){
           this.ganoJuego()
         } else{
-          setTimeout(this.siguienteNivel, 1500)
+          setTimeout(this.siguienteNivel, 1200)
         }
       }
     } else{
