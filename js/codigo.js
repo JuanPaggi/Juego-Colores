@@ -129,7 +129,7 @@ class Juego {
         if(this.nivel === (ULTIMO_NIVEL + 1)){
           this.ganoJuego()
         } else{
-          setTimeout(this.siguienteNivel, 1200)
+          setTimeout(this.siguienteNivel, 1000)
         }
       }
     } else{
